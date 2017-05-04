@@ -6,28 +6,28 @@
         <item
             android:id="@+id/nav_checkin"
             android:icon="@drawable/checkinout"
-            android:title="Check In / Check out" />
+            android:title="@string/check_in_check_out" />
         <item
             android:id="@+id/make_request"
             android:icon="@drawable/makearequest"
-            android:title="Make A Request" />
+            android:title="@string/make_a_request" />
         <item
             android:id="@+id/room_service"
             android:icon="@drawable/roomservice"
-            android:title="Room Service" />
+            android:title="@string/room_service" />
         <item
             android:id="@+id/out_and_about"
             android:icon="@drawable/outandabout"
-            android:title="Out And About" />
+            android:title="@string/out_and_about" />
 
         <item
             android:id="@+id/call_reception"
-            android:title="Call Reception"
+            android:title="@string/call_reception"
             android:icon="@drawable/callhotel"/>
 
         <item
             android:id="@+id/hotel_info"
-            android:title="Hotel Information"
+            android:title="@string/hotel_information"
             android:icon="@drawable/hotelinfo"/>
 
     </group>

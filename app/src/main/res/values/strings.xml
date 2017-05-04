@@ -2,4 +2,17 @@
     <string name="app_name">Hotel Application</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="roomser">roomser</string>
+    <string name="call">call</string>
+    <string name="checkin">checkin</string>
+    <string name="hotelinfo">hotelInfo</string>
+    <string name="makereq">makereq</string>
+    <string name="out">out</string>
+    <string name="call_reception">Call Reception</string>
+    <string name="check_in_check_out">Check In / Check out</string>
+    <string name="hotel_information">Hotel Information</string>
+    <string name="make_a_request">Make A Request</string>
+    <string name="out_and_about">Out And About</string>
+    <string name="room_service">Room Service</string>
+    <string name="settings">Settings</string>
 </resources>
