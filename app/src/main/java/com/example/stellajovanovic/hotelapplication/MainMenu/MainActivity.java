@@ -1,10 +1,14 @@
 package com.example.stellajovanovic.hotelapplication.MainMenu;
 
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -109,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             Intent startNewActivity = new Intent(this, CallReceptionActivity.class);
             startActivity(startNewActivity);
+
         } else if (id == R.id.hotel_info) {
 
             Intent startNewActivity = new Intent(this, HotelInformationActivity.class);
@@ -141,8 +146,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void sendToCallRec(View view) {
-        Intent intent = new Intent(MainActivity.this, CallReceptionActivity.class);
+        Intent intent = new Intent(MainActivity.this, RoomServiceActivity.class);
         startActivity(intent);
+
     }
 
     public void sendToHotelInfo(View view) {
