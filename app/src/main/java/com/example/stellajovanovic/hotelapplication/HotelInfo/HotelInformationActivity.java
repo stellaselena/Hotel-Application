@@ -19,7 +19,7 @@ public class HotelInformationActivity extends FragmentActivity implements OnMapR
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_hotel_information);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -44,11 +44,10 @@ public class HotelInformationActivity extends FragmentActivity implements OnMapR
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng hotelLoc = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(hotelLoc).title("Hotel Application"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(hotelLoc));
-
-        moveCamera();
+        LatLng oslo = new LatLng(59.913869, 10.752245);
+        mMap.addMarker(new MarkerOptions().position(oslo).title("Hotel"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(oslo,15));
+        mMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
         changeMapType();
     }
     private void changeMapType() {
@@ -59,13 +58,5 @@ public class HotelInformationActivity extends FragmentActivity implements OnMapR
         mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
     }
 
-    private void moveCamera() {
-        LatLng oslo = new LatLng(59, 10);
-        mMap.addMarker(new MarkerOptions().position(oslo).title("Oslo"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(oslo));
-
-        mMap.animateCamera(CameraUpdateFactory.zoomTo(10), 2000, null);
-
-    }
 
 }

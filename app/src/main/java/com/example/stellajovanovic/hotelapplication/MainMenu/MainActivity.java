@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void sendToCallRec(View view) {
-        Intent intent = new Intent(MainActivity.this, RoomServiceActivity.class);
+        Intent intent = new Intent(MainActivity.this, CallReceptionActivity.class);
         startActivity(intent);
 
     }
