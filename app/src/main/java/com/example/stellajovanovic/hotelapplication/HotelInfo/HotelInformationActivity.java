@@ -48,15 +48,8 @@ public class HotelInformationActivity extends FragmentActivity implements OnMapR
         mMap.addMarker(new MarkerOptions().position(oslo).title("Hotel"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(oslo,15));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
-        changeMapType();
     }
-    private void changeMapType() {
-        //de 4 typene som er tilgjengelig
-        mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        mMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN);
-    }
+
 
 
 }
