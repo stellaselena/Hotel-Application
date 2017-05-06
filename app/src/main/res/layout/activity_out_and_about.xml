@@ -7,4 +7,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity">
 
+    <WebView xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:id="@+id/webView1"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentStart="true"
+             tools:context=".BrowserActivity"></WebView>
+
+
 </android.support.constraint.ConstraintLayout>
