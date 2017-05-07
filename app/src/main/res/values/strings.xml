@@ -27,4 +27,22 @@
     <string name="email">Email</string>
     <string name="phoneNum">Phone</string>
     <string name="website">Website</string>
+    <string name="change_room">CHANGE ROOM</string>
+    <string name="check_out">CHECK OUT</string>
+    <string name="check_in">Check In</string>
+    <string name="check_in_date">Check in Date:</string>
+    <string name="room_number">Room number:</string>
+    <string name="welcome">Welcome,</string>
+    <string name="you_haven_t_checked_in_yet">You haven\'t checked in yet</string>
+    <string name="you_are_not_checked_in">you are not checked in</string>
+    <string name="checkinpicture">checkInPicture</string>
+
+
+    <string-array name="available_rooms">
+        <item>5</item>
+        <item>10</item>
+        <item>17</item>
+        <item>20</item>
+        <item>44</item>
+    </string-array>
 </resources>

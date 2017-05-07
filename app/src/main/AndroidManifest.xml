@@ -35,6 +35,11 @@
 
         </activity>
         <activity
+            android:name=".CheckIn.CustomerActivity"
+            android:parentActivityName=".CheckIn.CheckInActivity">
+
+        </activity>
+        <activity
             android:name=".MakeRequest.MakeRequestActivity"
             android:parentActivityName=".MainMenu.MainActivity">
 
