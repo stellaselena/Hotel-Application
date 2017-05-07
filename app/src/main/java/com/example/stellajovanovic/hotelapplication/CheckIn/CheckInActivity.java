@@ -91,8 +91,6 @@ public class CheckInActivity extends AppCompatActivity {
         }
 
 
-
-
         mTextName = (TextView) findViewById(R.id.textViewName);
         mTextName.setText(db.getCustomer(1).getName());
         mButtonChangeInfo = (Button) findViewById(R.id.buttonChangeInfo);
@@ -104,6 +102,8 @@ public class CheckInActivity extends AppCompatActivity {
             }
         });
         mButtonCheckIn = (ImageButton) findViewById(R.id.buttonCheckIn);
+        mTextCheckIn = (TextView) findViewById(R.id.tvCheckIn);
+        mTextCheckIn.setText("You haven't checked in yet");
         mButtonCheckIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +117,7 @@ public class CheckInActivity extends AppCompatActivity {
         mButtonCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mTextCheckIn.getText().toString().contains("You")) {
+                if (mTextCheckIn.getText().toString().contains("You")){
                     Toast.makeText(getApplicationContext(), "You can't checkout because you are not checked in.",
                             Toast.LENGTH_LONG).show();
                 } else {
