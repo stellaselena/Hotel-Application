@@ -73,9 +73,25 @@ public class CheckInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_check_in);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        db.onUpgrade(db.getWritableDatabase(), 1, 2);
+        //db.onUpgrade(db.getWritableDatabase(), 1, 2);
 
-        db.createCustomer(new Customer("Stella", "Selena", null));
+
+        String room = getIntent().getStringExtra("roomnr");
+
+        Customer customer = new Customer();
+        customer.setName("Stella");
+        customer.setSurname("Selena");
+        db.createCustomer(customer);
+
+        if(room!=null && db.getCustomer(1).getId() == 1) {
+            customer.setName("Stella");
+            customer.setSurname("Selena");
+            customer.setRoomNumber(room);
+            db.updateCustomer(customer);
+        }
+
+
+
 
         mTextName = (TextView) findViewById(R.id.textViewName);
         mTextName.setText(db.getCustomer(1).getName());
@@ -101,7 +117,14 @@ public class CheckInActivity extends AppCompatActivity {
         mButtonCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: 06.05.2017 send to another activity
+                if (mTextCheckIn.getText().toString().contains("You")) {
+                    Toast.makeText(getApplicationContext(), "You can't checkout because you are not checked in.",
+                            Toast.LENGTH_LONG).show();
+                } else {
+                    mTextCheckIn.setText("You haven't checked in yet");
+                    Toast.makeText(getApplicationContext(), "You have been checked out. We hope that you have enjoyed your stay.",
+                            Toast.LENGTH_LONG).show();
+                }
 
             }
         });

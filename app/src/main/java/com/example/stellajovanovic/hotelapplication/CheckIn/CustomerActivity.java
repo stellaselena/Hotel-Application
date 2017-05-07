@@ -1,5 +1,6 @@
 package com.example.stellajovanovic.hotelapplication.CheckIn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -63,6 +64,10 @@ public class CustomerActivity extends AppCompatActivity {
                     db.updateCustomer(selectedCustomer);
                     Toast.makeText(getApplicationContext(), "Your room number has been updated.", Toast.LENGTH_SHORT).show();
                     roomNumber.setText(selectedCustomer.getRoomNumber());
+                    Intent intent = new Intent(getBaseContext(), CheckInActivity.class);
+                    String roomNr = selectedCustomer.getRoomNumber();
+                    intent.putExtra("roomnr", roomNr);
+
 
                 }
 
