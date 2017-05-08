@@ -36,6 +36,12 @@
     <string name="you_haven_t_checked_in_yet">You haven\'t checked in yet</string>
     <string name="you_are_not_checked_in">you are not checked in</string>
     <string name="checkinpicture">checkInPicture</string>
+    <string name="extra_pillows">Extra Pillows</string>
+    <string name="extra_towels">Extra towels</string>
+    <string name="make_a_request_Header">Make a request</string>
+    <string name="order">Order</string>
+    <string name="refill_minibar">Refill minibar</string>
+    <string name="room_number_maq">Room number:</string>
 
 
     <string-array name="available_rooms">
