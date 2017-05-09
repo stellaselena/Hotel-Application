@@ -1,14 +1,10 @@
 package com.example.stellajovanovic.hotelapplication.MainMenu;
 
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -25,6 +21,7 @@ import com.example.stellajovanovic.hotelapplication.HotelInfo.HotelInformationAc
 import com.example.stellajovanovic.hotelapplication.MakeRequest.MakeRequestActivity;
 import com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity;
 import com.example.stellajovanovic.hotelapplication.R;
+import com.example.stellajovanovic.hotelapplication.RoomService.CatalogActivity;
 import com.example.stellajovanovic.hotelapplication.RoomService.RoomServiceActivity;
 
 
@@ -136,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void sendToRoomSer(View view) {
-        Intent intent = new Intent(MainActivity.this, RoomServiceActivity.class);
+        Intent intent = new Intent(MainActivity.this, CatalogActivity.class);
         startActivity(intent);
     }
 
