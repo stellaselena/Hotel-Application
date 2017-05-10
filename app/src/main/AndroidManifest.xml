@@ -67,13 +67,20 @@
         </activity>
 
         <activity
-            android:name=".RoomService.ShoppingCartActivity"
+            android:name=".RoomService.CartActivity"
             >
 
         </activity>
 
         <activity
-            android:name=".RoomService.ProductDetailsActivity"
+            android:name=".RoomService.FoodDetailsActivity"
+            >
+
+        </activity>
+
+        <activity
+            android:name=".RoomService.RoomServiceActivity"
+            android:parentActivityName=".MainMenu.MainActivity"
             >
 
         </activity>

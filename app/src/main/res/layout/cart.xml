@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dip"
+        android:text="Shopping Cart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24dip"
+        android:textStyle="bold"></TextView>
+
+    <ListView
+        android:id="@+id/ListViewMenu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:cacheColorHint="#ffffff"
+        android:choiceMode="multipleChoice"
+        android:clickable="true">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="5dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Button02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Proceed to Checkout"
+            android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"></Button>
+    </LinearLayout>
+
+
+</LinearLayout>

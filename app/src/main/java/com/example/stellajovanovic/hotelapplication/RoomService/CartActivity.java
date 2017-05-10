@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
@@ -14,19 +13,27 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.example.stellajovanovic.hotelapplication.R;
 
-public class CatalogActivity extends Activity {
+public class CartActivity extends Activity {
 
-    private List<Food> mFoodList;
+    private List<Food> mCartList;
+    private FoodAdapter mFoodAdapter;
+    private Button mButton;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.food_menu);
+        setContentView(R.layout.cart);
 
-        mFoodList = CartHelper.getCatalog(getResources());
 
-        ListView listViewCatalog = (ListView) findViewById(R.id.ListViewMenu);
-        listViewCatalog.setAdapter(new FoodAdapter(mFoodList, getLayoutInflater(), false));
+        mCartList = CartHelper.getCartList();
+
+        for (int i = 0; i < mCartList.size(); i++) {
+            mCartList.get(i).selected = false;
+        }
+
+        final ListView listViewCatalog = (ListView) findViewById(R.id.ListViewMenu);
+        mFoodAdapter = new FoodAdapter(mCartList, getLayoutInflater(), true);
+        listViewCatalog.setAdapter(mFoodAdapter);
 
         listViewCatalog.setOnItemClickListener(new OnItemClickListener() {
 
@@ -38,16 +45,25 @@ public class CatalogActivity extends Activity {
                 startActivity(productDetailsIntent);
             }
         });
-
-        Button viewShoppingCart = (Button) findViewById(R.id.ButtonViewCart);
-        viewShoppingCart.setOnClickListener(new OnClickListener() {
-
+        mButton = (Button) findViewById(R.id.Button02);
+        mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent viewShoppingCartIntent = new Intent(getBaseContext(), CartActivity.class);
-                startActivity(viewShoppingCartIntent);
+                Intent intent = new Intent(CartActivity.this, RoomServiceActivity.class);
+                startActivity(intent);
             }
         });
 
+
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (mFoodAdapter != null) {
+            mFoodAdapter.notifyDataSetChanged();
+        }
+    }
+
 }
