@@ -32,7 +32,12 @@ public class MakeRequestActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         tvRoom = (TextView) findViewById(R.id.tvRoom);
-        tvRoom.setText(db.getCustomer(1).getRoomNumber().toString());
+        if(db.getCustomer(1).getRoomNumber() != null){
+            tvRoom.setText(db.getCustomer(1).getRoomNumber().toString());
+
+        } else {
+            tvRoom.setText(" ");
+        }
 
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
 

@@ -14,13 +14,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.stellajovanovic.hotelapplication.CheckIn.CustomerSQLiteHelper;
 import com.example.stellajovanovic.hotelapplication.R;
 
 public class RoomServiceActivity extends AppCompatActivity {
 
     private static final String TAG = "RoomServiceActivity";
-
+    CustomerSQLiteHelper db = new CustomerSQLiteHelper(this);
     TextView textView;
+    TextView tvRoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,13 @@ public class RoomServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_room_service);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         textView = (TextView) findViewById(R.id.textView);
+        tvRoom = (TextView)findViewById(R.id.tvRoomNr);
+        if(db.getCustomer(1).getRoomNumber() != null){
+            tvRoom.setText("Room number: " + db.getCustomer(1).getRoomNumber().toString());
+
+        } else {
+            tvRoom.setText(" ");
+        }
         StringBuffer stringBuffer = new StringBuffer();
         double total = 0;
         if (CartHelper.getCartList().size() != 0) {

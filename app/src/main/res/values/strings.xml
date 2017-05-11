@@ -15,7 +15,7 @@
     <string name="out_and_about">Out And About</string>
     <string name="room_service">Room Service</string>
     <string name="settings">Settings</string>
-    <string name="callUs">In order to fully service our guests, the reception is open 24 hours a day. Feel free to call the reception if you need anything. You will be redirected to the phone dial.</string>
+    <string name="callUs">In order to fully service our guests, the reception is open 24 hours a day.\n Feel free to call the reception if you need anything.\n You will be redirected to the phone dial.</string>
     <string name="title_activity_maps">Map</string>
     <string name="_00_123456789">+00 123456789</string>
     <string name="hotel_application_hotelapplication_com">hotel.application@hotelapplication.com</string>
