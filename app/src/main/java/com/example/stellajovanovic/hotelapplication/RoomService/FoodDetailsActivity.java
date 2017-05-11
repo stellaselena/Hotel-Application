@@ -34,6 +34,8 @@ public class FoodDetailsActivity extends Activity {
         foodTitle.setText(selectedFood.title);
         TextView foodDetails = (TextView) findViewById(R.id.TextViewFoodDetails);
         foodDetails.setText(selectedFood.description);
+        TextView foodPrice = (TextView)findViewById(R.id.TextViewFoodPrice);
+        foodPrice.setText(selectedFood.price + "NOK");
 
         TextView textViewCurrentQuantity = (TextView) findViewById(R.id.textViewCurrentlyInCart);
         textViewCurrentQuantity.setText("Currently in Cart: " + CartHelper.getProductQuantity(selectedFood));

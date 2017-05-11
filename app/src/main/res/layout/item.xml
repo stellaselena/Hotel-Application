@@ -27,7 +27,8 @@
             android:minLines="2"
             android:text="Food"
             android:textColor="@color/colorPrimary"
-            android:textSize="26dip"></TextView>
+            android:textSize="24sp"
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/TextView01"
