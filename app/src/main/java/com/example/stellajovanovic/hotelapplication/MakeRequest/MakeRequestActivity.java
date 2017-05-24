@@ -40,6 +40,8 @@ public class MakeRequestActivity extends AppCompatActivity {
         }
 
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+        mProgressBar.setMax(10);
+
 
         orderStatus = (TextView) findViewById(R.id.statusTv);
 
