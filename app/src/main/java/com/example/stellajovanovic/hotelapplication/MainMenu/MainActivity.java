@@ -21,7 +21,7 @@ import com.example.stellajovanovic.hotelapplication.HotelInfo.HotelInformationAc
 import com.example.stellajovanovic.hotelapplication.MakeRequest.MakeRequestActivity;
 import com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity;
 import com.example.stellajovanovic.hotelapplication.R;
-import com.example.stellajovanovic.hotelapplication.RoomService.CatalogActivity;
+import com.example.stellajovanovic.hotelapplication.RoomService.MenuActivity;
 import com.example.stellajovanovic.hotelapplication.RoomService.RoomServiceActivity;
 
 
@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void sendToRoomSer(View view) {
-        Intent intent = new Intent(MainActivity.this, CatalogActivity.class);
+        Intent intent = new Intent(MainActivity.this, MenuActivity.class);
         startActivity(intent);
     }
 

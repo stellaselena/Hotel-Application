@@ -111,7 +111,7 @@ public class MakeRequestActivity extends AppCompatActivity {
 
             for (; count <= params[0]; count++) {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(2000);
                     publishProgress(count);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

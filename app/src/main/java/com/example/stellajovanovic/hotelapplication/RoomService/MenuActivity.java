@@ -14,7 +14,7 @@ import android.widget.AdapterView.OnItemClickListener;
 
 import com.example.stellajovanovic.hotelapplication.R;
 
-public class CatalogActivity extends Activity {
+public class MenuActivity extends Activity {
 
     private List<Food> mFoodList;
 

@@ -61,7 +61,7 @@
         </activity>
 
         <activity
-            android:name=".RoomService.CatalogActivity"
+            android:name=".RoomService.MenuActivity"
             >
 
         </activity>
