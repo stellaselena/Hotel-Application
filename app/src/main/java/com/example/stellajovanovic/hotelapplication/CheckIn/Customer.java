@@ -10,14 +10,17 @@ public class Customer {
     private String name;
     private String surname;
     private String roomNumber;
+    private String checkInDate;
+
 
     public Customer(){}
 
-    public Customer(String name, String surname, String roomNumber) {
+    public Customer(String name, String surname, String roomNumber, String checkIn) {
         super();
         this.name = name;
         this.surname = surname;
         this.roomNumber = roomNumber;
+        this.checkInDate = checkIn;
     }
 
     public int getId() {
@@ -52,13 +55,22 @@ public class Customer {
         this.roomNumber = roomNumber;
     }
 
+    public String getCheckInDate() {
+        return checkInDate;
+    }
+
+    public void setCheckInDate(String checkInDate) {
+        this.checkInDate = checkInDate;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", roomNumber=" + roomNumber +
+                ", roomNumber='" + roomNumber + '\'' +
+                ", checkInDate=" + checkInDate +
                 '}';
     }
 }

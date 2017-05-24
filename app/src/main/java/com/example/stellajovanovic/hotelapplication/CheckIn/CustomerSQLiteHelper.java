@@ -16,14 +16,17 @@ import java.util.List;
 
 public class CustomerSQLiteHelper extends SQLiteOpenHelper {
 
-    private static final int database_VERSION = 1;
+    private static final int database_VERSION = 2;
     public static final String database_NAME = "customerDB";
+
     private static final String table_CUSTOMERS = "customers";
+
     private static final String customer_ID = "id";
     private static final String customer_NAME = "name";
     private static final String customer_SURNAME = "surname";
     public static final String customer_ROOMNUMBER = "roomnumber";
-    private static final String[] COLUMNS = {customer_ID, customer_NAME, customer_SURNAME, customer_ROOMNUMBER};
+    public static final String customer_CHECKINDATE = "checkindate";
+    private static final String[] COLUMNS = {customer_ID, customer_NAME, customer_SURNAME, customer_ROOMNUMBER, customer_CHECKINDATE};
 
     public CustomerSQLiteHelper(Context context) {
         super(context, database_NAME, null, database_VERSION);
@@ -32,7 +35,7 @@ public class CustomerSQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_CUSTOMER_TABLE = "CREATE TABLE customers ( " + "id INTEGER PRIMARY KEY AUTOINCREMENT, " + "name TEXT, " + "surname TEXT, " + "roomnumber TEXT)";
+        String CREATE_CUSTOMER_TABLE = "CREATE TABLE customers ( " + "id INTEGER PRIMARY KEY AUTOINCREMENT, " + "name TEXT, " + "surname TEXT, " + "roomnumber TEXT, " + "checkindate TEXT)";
         db.execSQL(CREATE_CUSTOMER_TABLE);
     }
 
@@ -49,6 +52,7 @@ public class CustomerSQLiteHelper extends SQLiteOpenHelper {
         values.put(customer_NAME, customer.getName());
         values.put(customer_SURNAME, customer.getSurname());
         values.put(customer_ROOMNUMBER, customer.getRoomNumber());
+        values.put(customer_CHECKINDATE, customer.getCheckInDate());
 
 
         db.insert(table_CUSTOMERS, null, values);
@@ -73,6 +77,7 @@ public class CustomerSQLiteHelper extends SQLiteOpenHelper {
         customer.setName(cursor.getString(1));
         customer.setSurname(cursor.getString(2));
         customer.setRoomNumber(cursor.getString(3));
+        customer.setCheckInDate(cursor.getString(4));
 
         return customer;
     }
@@ -93,6 +98,7 @@ public class CustomerSQLiteHelper extends SQLiteOpenHelper {
                 customer.setName(cursor.getString(1));
                 customer.setSurname(cursor.getString(2));
                 customer.setRoomNumber(cursor.getString(3));
+                customer.setCheckInDate(cursor.getString(4));
 
                 customers.add(customer);
             } while (cursor.moveToNext());
@@ -108,6 +114,7 @@ public class CustomerSQLiteHelper extends SQLiteOpenHelper {
         values.put("name", customer.getName());
         values.put("surname", customer.getSurname());
         values.put("roomnumber", customer.getRoomNumber());
+        values.put("checkindate", customer.getCheckInDate());
 
         int i = db.update(table_CUSTOMERS, values, customer_ID + " = ?", new String[] { String.valueOf(customer.getId()) });
 
