@@ -22,6 +22,7 @@ import com.example.stellajovanovic.hotelapplication.CallReception.CallReceptionA
 import com.example.stellajovanovic.hotelapplication.CheckIn.CheckInActivity;
 import com.example.stellajovanovic.hotelapplication.HotelInfo.HotelInformationActivity;
 import com.example.stellajovanovic.hotelapplication.MakeRequest.MakeRequestActivity;
+import com.example.stellajovanovic.hotelapplication.OutAndABout.MyActivity;
 import com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity;
 import com.example.stellajovanovic.hotelapplication.R;
 import com.example.stellajovanovic.hotelapplication.RoomService.MenuActivity;
@@ -147,7 +148,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        Intent intent = new Intent(MainActivity.this, OutAndAboutActivity.class);
+                        Intent intent = new Intent(MainActivity.this, MyActivity.class);
                         startActivity(intent);
                     }})
                 .setNegativeButton(android.R.string.no, null).show();
