@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity">
+    tools:context="com.example.stellajovanovic.hotelapplication.OutAndABout.TripAdvisorActivity">
 
     <WebView xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"

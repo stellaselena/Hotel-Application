@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:id="@+id/places_main"
                 android:layout_width="match_parent"
@@ -8,7 +9,7 @@
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                tools:context="com.example.stellajovanovic.hotelapplication.OutAndABout.MyActivity">
+                tools:context="com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity">
 
     <Button
         android:id="@+id/btnGetPlace"
@@ -24,9 +25,9 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/btnGetPlace"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/tvPlaceName"
@@ -39,12 +40,12 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/cardView"
         android:layout_alignParentStart="true"
-        android:id="@+id/cardView2">
+        android:layout_below="@+id/cardView"
+        android:layout_marginTop="46dp">
 
         <TextView
             android:id="@+id/tvPlacePhone"
@@ -60,9 +61,9 @@
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/cardView"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="15dp">
 
         <TextView
             android:id="@+id/tvPlaceAddress"
@@ -73,12 +74,12 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/cardView2"
         android:layout_alignParentStart="true"
-        android:id="@+id/cardView3">
+        android:layout_below="@+id/cardView2"
+        android:layout_marginTop="27dp">
 
         <TextView
             android:id="@+id/textView28"
@@ -98,5 +99,50 @@
         android:backgroundTint="@color/colorPrimary"
         android:text="Send me to Trip ADvisor"
         android:textColor="@color/common_google_signin_btn_text_dark_default"/>
+
+
+    <ImageView
+        android:id="@+id/weatherIconIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon_na"
+        android:layout_below="@+id/btnTA"
+        android:layout_alignStart="@+id/temperatureTv"/>
+
+    <TextView
+        android:id="@+id/temperatureTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/temperature"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_below="@+id/weatherIconIv"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/conditionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/condition"
+        android:layout_below="@+id/weatherIconIv"
+        android:layout_alignEnd="@+id/locationTv"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:id="@+id/locationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textStyle="bold"
+        android:layout_below="@+id/conditionTv"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:src="@drawable/yahoo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

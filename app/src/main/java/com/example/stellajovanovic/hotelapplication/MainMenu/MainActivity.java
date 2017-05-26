@@ -16,14 +16,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.example.stellajovanovic.hotelapplication.CallReception.CallReceptionActivity;
 import com.example.stellajovanovic.hotelapplication.CheckIn.CheckInActivity;
 import com.example.stellajovanovic.hotelapplication.HotelInfo.HotelInformationActivity;
 import com.example.stellajovanovic.hotelapplication.MakeRequest.MakeRequestActivity;
-import com.example.stellajovanovic.hotelapplication.OutAndABout.MyActivity;
 import com.example.stellajovanovic.hotelapplication.OutAndABout.OutAndAboutActivity;
+import com.example.stellajovanovic.hotelapplication.OutAndABout.TripAdvisorActivity;
 import com.example.stellajovanovic.hotelapplication.R;
 import com.example.stellajovanovic.hotelapplication.RoomService.MenuActivity;
 import com.example.stellajovanovic.hotelapplication.RoomService.RoomServiceActivity;
@@ -108,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(startNewActivity);
         } else if (id == R.id.out_and_about) {
 
-            Intent startNewActivity = new Intent(this, OutAndAboutActivity.class);
+            Intent startNewActivity = new Intent(this, TripAdvisorActivity.class);
             startActivity(startNewActivity);
         } else if (id == R.id.call_reception) {
 
@@ -142,16 +141,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void sendToOut(View view) {
-        new AlertDialog.Builder(this)
+       /* new AlertDialog.Builder(this)
                 .setTitle("Confirmation")
                 .setMessage("Do you wish to be redirected to Trip Advisor?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        Intent intent = new Intent(MainActivity.this, MyActivity.class);
+                    public void onClick(DialogInterface dialog, int whichButton) {*/
+                        Intent intent = new Intent(MainActivity.this, OutAndAboutActivity.class);
                         startActivity(intent);
-                    }})
-                .setNegativeButton(android.R.string.no, null).show();
+                 /*   }})
+                .setNegativeButton(android.R.string.no, null).show();*/
 
     }
 
